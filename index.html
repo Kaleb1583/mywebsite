@@ -41,11 +41,6 @@ html, body {
   <p><a href="https://replit.com/@Kaleb1583/">• Replit</a></p>
   <p><a href="https://codepen.io/-kaleb-">• CodePen</a></p>
   <p(i very rarely use codepen)</p>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <div style="width: 35%; border-style: dotted; border-color: red;" id="SpeedInputHolder" hidden>
-    Switch Color Every <input id="speed" placeholder="Milliseconds" value="1000"></input> Milliseconds (s)
-    <br>(higher = faster and vice versa)
-  </div>
 </body>
 <script>
 
@@ -55,19 +50,14 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
   
-function colorLoop() {
+function randomColor() {
   var delay = document.getElementById("speed").value;
   var body = document.body;
   var randomInt = getRandomInt(colors.length);
   body.style.backgroundColor = colors[randomInt-1+2];
   var timeout = setTimeout(colorLoop, delay);
 }
-colorLoop();
-//function onkeypress(e) {
-  //if(e.key == ) {
-    //document.getElementbyId("SpeedInputHolder").hidden = false; 
-  //}
-//}
+
 </script>
 
 /* By Kaleb1583 */
